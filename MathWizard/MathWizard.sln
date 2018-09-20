@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathWizard", "MathWizard\MathWizard.csproj", "{C791DDF0-8B5F-4376-8B8D-8CFDC1D414E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C791DDF0-8B5F-4376-8B8D-8CFDC1D414E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C791DDF0-8B5F-4376-8B8D-8CFDC1D414E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C791DDF0-8B5F-4376-8B8D-8CFDC1D414E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C791DDF0-8B5F-4376-8B8D-8CFDC1D414E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97D4378E-C91F-4CB3-8FED-3F4254336DC0}
+	EndGlobalSection
+EndGlobal
