@@ -1,4 +1,6 @@
-  Math wizard is a computer program that can convert quadratics to polynomials (vice versa), and perform related functions. This program might be able to help you on your algebra homework, or help you finish any problems. It can be really handy at times.
+Math Wizard  
+  
+  Math wizard is a computer program that can convert quadratics to polynomials (vice versa), and perform related functions. This program might be able to help you on your algebra homework, or help you finish any problems. It can be really handy at times. Since tou already found this page, to download, go to "https://github.com/MightyKingM/MathWizard/blob/master/MathWizard/MathWizard/bin/Debug/MathWizard.exe?raw=true"
   
   Limitations; This program can only hadle binomials, and trinomials. The program will request a parsable fomat (mentioned below), and might take a while to do certain calculations. Note, the calculations assume you eecute 1 line of code every 1ms. Also, you cannot involve any form of subtraction.
   
