@@ -4,7 +4,7 @@ Math Wizard
 Release Notes
 -------------------------------------------------------------------------------------------------------------------------------------------
 Release 4.0.0.0
-We added compatibility for subtraction (negative integers). We also added Work Faker (beta version). Work faker fakes work for your math problem. Note: Prepare at least 20 sheets of letter size paper for printing.
+We added compatibility for subtraction (negative integers). Because we added negative integers, the amount of work in multiplied by alot. math wizard will be 4, or 8 times slower, depending on the function performed. We also added Work Faker (beta version). Work faker fakes work for your math problem. Note: Prepare at least 20 sheets of letter size paper for printing.
 -------------------------------------------------------------------------------------------------------------------------------------------
 Release 3.0.0.0
 Math Wizard has become a lot faster with optimization technology. We removed the quadratic validators, and polynomial validators. To validate an expression, just solve it and if it isn't valid, it will show in the output. But we also added a general tab, in which you can generate a random quadratic.
