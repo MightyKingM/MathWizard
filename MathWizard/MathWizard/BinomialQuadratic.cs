@@ -40,60 +40,39 @@ namespace MathWizard
         public BinomialQuadratic(string input)
         {
             string temp = "";
-            input += " ";
+            input +=" ";
             List<int> data = new List<int>();
             for (int i = 0; i < input.Length; i++)
             {
                 if (IsNumber(input[i]))
                 {
-                    if (IsNumber(input[0]))
-                    {
-                        if (i != 3)
-                        {
-                            temp += input[i];
-                        }
-                    }
-                    else
-                    {
-                        if (i != 2)
-                        {
-                            temp += input[i];
-                        }
-                    }
+                    temp += input[i];
                 }
-                else if(i!=0)
+                else
                 {
-                    if (IsNumber(input[i - 1]))
+                    if (i != 0 && IsNumber(input[i - 1]))
                     {
-                        if (IsNumber(input[0]) && i != 4)
-                        {
-                            data.Add(int.Parse(temp));
-                            temp = "";
-                        }
-                        else if (!IsNumber(input[0]) &&i != 3)
-                        {
-                            data.Add(int.Parse(temp));
-                            temp = "";
-                        }
+                        data.Add(int.Parse(temp));
+                        temp = "";
                     }
                 }
             }
             if (IsNumber(input[0]))
             {
                 c = data[0];
-                a = data[1];
-                b = data[2];
+                a = data[2];
+                b = data[3];
             }
             else
             {
-                a = data[0];
-                b = data[1];
+                a = data[1];
+                b = data[2];
                 c = 1;
             }
         }
         public bool IsNumber(char i)
         {
-            if (i == '1' || i == '2' || i == '3' || i == '4' || i == '5' || i == '6' || i == '7' || i == '8' || i == '9' || i == '0')
+            if (i == '1' || i == '2' || i == '3' || i == '4' || i == '5' || i == '6' || i == '7' || i == '8' || i == '9' || i == '0'||i=='-')
             {
                 return true;
             }

@@ -51,12 +51,12 @@ namespace MathWizard
             Binomial otp = new Binomial(1,1,1);
             
             Display.Text+="\r\nBegining Value\r\n" + bgn.AsString();
-            progressBar.Maximum = bgn.GetMaximumProgress() * bgn.GetMaximumProgress() * bgn.GetMaximumProgress();
-            for(int i = 1; i < bgn.GetMaximumProgress(); i++)
+            progressBar.Maximum = bgn.GetMaximumProgress() * bgn.GetMaximumProgress() * bgn.GetMaximumProgress()*4;
+            for(int i = -bgn.GetMaximumProgress(); i < bgn.GetMaximumProgress(); i++)
             {
-                for(int x = 1; x < bgn.GetMaximumProgress(); x++)
+                for(int x = -bgn.GetMaximumProgress(); x < bgn.GetMaximumProgress(); x++)
                 {
-                    if(bgn.a/bgn.c == x+i&& bgn.b/bgn.c == i*x)
+                    if(bgn.a/bgn.c == x+i&& bgn.b/bgn.c == i*x&&i!=0&&x!=0)
                     {
                         progressBar.Value = progressBar.Maximum;
                         otp = new Binomial(i, x,bgn.c);
@@ -70,7 +70,7 @@ namespace MathWizard
                     {
                         Faker.NewLine("Attempt No. "+i*x+". NoMatch, Trying "+ i +" and " + x+" Eqn: "+i+"+"+x+" doesn't equal " + bgn.a +"/"+bgn.c+", just as "+ i+"*"+x+" doesn't equal" + bgn.b + "/"+bgn.c);
                     }
-                    progressBar.Value = i * x;
+                    progressBar.Value++;
                 }
             }
             Display.Text += "\r\n\r\nOutput Value\r\n" +
@@ -141,12 +141,12 @@ namespace MathWizard
                 progressBar.Value = progressBar.Maximum;
                 return;
             }
-            progressBar.Maximum = bgn.GetMaximumProgrss() * bgn.GetMaximumProgrss() * bgn.GetMaximumProgrss();
-            for (int a = 1; a <bgn.GetMaximumProgrss(); a++)
+            progressBar.Maximum = bgn.GetMaximumProgrss() * bgn.GetMaximumProgrss() * bgn.GetMaximumProgrss()*8;
+            for (int a = -bgn.GetMaximumProgrss(); a <bgn.GetMaximumProgrss(); a++)
             {
-                for(int b =1; b < bgn.GetMaximumProgrss(); b++)
+                for(int b =-bgn.GetMaximumProgrss(); b < bgn.GetMaximumProgrss(); b++)
                 {
-                    for(int c = 1; c<bgn.GetMaximumProgrss(); c++)
+                    for(int c=-bgn.GetMaximumProgrss(); c<bgn.GetMaximumProgrss(); c++)
                     {
                         if(bgn.a == bgn.d * c + (a+b) && bgn.b == a*b+c*a+b*a
                             && bgn.c == a *b*c)
@@ -156,7 +156,7 @@ namespace MathWizard
                             Display.Text += "Output:\r\n"+otp.AsString();
                             return;
                         }
-                        progressBar.Value = a*b*c;
+                        progressBar.Value++;
                     }
                 }
             }

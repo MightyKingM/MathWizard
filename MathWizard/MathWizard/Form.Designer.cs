@@ -190,14 +190,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 837);
+            this.ClientSize = new System.Drawing.Size(1300, 900);
             this.Controls.Add(this.Tabs);
             this.Controls.Add(this.PrintWork);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.InputBox);
             this.Name = "Form";
-            this.Text = "Form1";
+            this.Text = "Math Wizard";
             this.Tabs.ResumeLayout(false);
             this.BinomialsTab.ResumeLayout(false);
             this.TrinomialTab.ResumeLayout(false);

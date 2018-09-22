@@ -3,8 +3,7 @@ c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\bin
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\bin\Debug\MathWizard.pdb
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.Properties.Resources.resources
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.csproj.GenerateResource.cache
-c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.csproj.CoreCompileInputs.cache
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.exe
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.pdb
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.Form.resources
-C:\Users\Michael\Documents\Visual Studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\Visual Studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.csprojResolveAssemblyReference.cache

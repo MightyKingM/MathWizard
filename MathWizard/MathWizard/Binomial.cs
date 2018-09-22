@@ -65,7 +65,7 @@ namespace MathWizard
         }
         public bool IsNumber(char i)
         {
-            if(i=='1'||i=='2'||i=='3'||i=='4'||i=='5' || i =='6' || i =='7' || i == '8'||i=='9'||i=='0')
+            if(i=='1'||i=='2'||i=='3'||i=='4'||i=='5' || i =='6' || i =='7' || i == '8'||i=='9'||i=='0'||i=='-')
             {
                 return true;
             }

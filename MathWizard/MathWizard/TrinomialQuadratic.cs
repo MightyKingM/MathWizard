@@ -61,10 +61,20 @@ namespace MathWizard
                     }
                 }
             }
-            d = data[0];
-            a = data[2];
-            b = data[4];
-            c = data[5];
+            if (IsNumber(input[0]))
+            {
+                d = data[0];
+                a = data[2];
+                b = data[4];
+                c = data[5];
+            }
+            else
+            {
+                d = 1;
+                a = data[1];
+                a = data[3];
+                c = data[4];
+            }
         }
 
         public string AsString()
@@ -73,7 +83,7 @@ namespace MathWizard
         }
         public bool IsNumber(char i)
         {
-            if (i == '1' || i == '2' || i == '3' || i == '4' || i == '5' || i == '6' || i == '7' || i == '8' || i == '9' || i == '0')
+            if (i == '1' || i == '2' || i == '3' || i == '4' || i == '5' || i == '6' || i == '7' || i == '8' || i == '9' || i == '0'||i=='-')
             {
                 return true;
             }
