@@ -3,5 +3,15 @@ Math Wizard
 
 Release Notes
 -------------------------------------------------------------------------------------------------------------------------------------------
+Release 4.0.0.0
+We added compatibility for subtraction (negative integers). We also added Work Faker (beta version). Work faker fakes work for your math problem. Note: Prepare at least 20 sheets of letter size paper for printing.
+-------------------------------------------------------------------------------------------------------------------------------------------
+Release 3.0.0.0
+Math Wizard has become a lot faster with optimization technology. We removed the quadratic validators, and polynomial validators. To validate an expression, just solve it and if it isn't valid, it will show in the output. But we also added a general tab, in which you can generate a random quadratic.
+-------------------------------------------------------------------------------------------------------------------------------------------
+Release 2.0.0.0
+You can now turn quadratics into back into their binomial or trinomial forms. Note, to turn back a quadratic into its trinomial form takes a lot longer.
+-------------------------------------------------------------------------------------------------------------------------------------------
 Release 1.0.0.0
-Math Wizard has been released! You can Now easily turn binomials into quadratics and quadratics back into binomials. You can only add values in
+Math Wizard has been released! You can Now easily turn binomials into quadratics and quadratics back into binomials. You can only add values (+).
+-------------------------------------------------------------------------------------------------------------------------------------------
