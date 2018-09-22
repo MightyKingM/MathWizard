@@ -1,0 +1,7 @@
+Math Wizard 
+(C)Michael Wang 2017-2018
+
+Release Notes
+-------------------------------------------------------------------------------------------------------------------------------------------
+Release 1.0.0.0
+Math Wizard has been released! You can Now easily turn binomials into quadratics and quadratics back into binomials. You can only add values in
