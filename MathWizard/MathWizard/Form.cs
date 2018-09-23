@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MathWizard
@@ -13,6 +12,7 @@ namespace MathWizard
     public partial class Form : System.Windows.Forms.Form
     {
         WorkFaker Faker;
+        Wizard wizard;
         public Form()
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace MathWizard
             this.MaximizeBox = false;
             this.Text = "Math Wizard";
             Faker = new WorkFaker();
+            wizard = new Wizard();
             Display.Text = "Math Wizard \r\n(C) Michael Wang\r\n\r\n" +
                 "Version " + Application.ProductVersion + "\r\n" +
                 "Major Version " + Application.ProductVersion[0] + "\r\n" +
@@ -48,35 +49,11 @@ namespace MathWizard
                     "should be of ax^2+bx+c";
                 return;
             }
-            Binomial otp = new Binomial(1,1,1);
+            Binomial otp = wizard.ToBinomial(bgn);
+            Faker.NewLine("="+otp.AsString());
+            Display.Text += "\r\nBegining Value:\r\n" + bgn.AsString();
+            Display.Text += "\r\nOutput:\r\n"+otp.AsString();
             
-            Display.Text+="\r\nBegining Value\r\n" + bgn.AsString();
-            progressBar.Maximum = bgn.GetMaximumProgress() * bgn.GetMaximumProgress() * bgn.GetMaximumProgress()*4;
-            for(int i = -bgn.GetMaximumProgress(); i < bgn.GetMaximumProgress(); i++)
-            {
-                for(int x = -bgn.GetMaximumProgress(); x < bgn.GetMaximumProgress(); x++)
-                {
-                    if(bgn.a/bgn.c == x+i&& bgn.b/bgn.c == i*x&&i!=0&&x!=0)
-                    {
-                        progressBar.Value = progressBar.Maximum;
-                        otp = new Binomial(i, x,bgn.c);
-                        Display.Text += "\r\n\r\n" +
-                        "Output Value\r\n" + otp.AsString();
-                        Faker.NewLine("Matched!");
-                        Faker.NewLine("");
-                        return;
-                    }
-                    else
-                    {
-                        Faker.NewLine("Attempt No. "+i*x+". NoMatch, Trying "+ i +" and " + x+" Eqn: "+i+"+"+x+" doesn't equal " + bgn.a +"/"+bgn.c+", just as "+ i+"*"+x+" doesn't equal" + bgn.b + "/"+bgn.c);
-                    }
-                    progressBar.Value++;
-                }
-            }
-            Display.Text += "\r\n\r\nOutput Value\r\n" +
-                "This type of quadratic cannot be factored; must have int results";
-            Faker.NewLine("No Solution for this quadratic");
-            Faker.NewLine("");
             Faker.question++;progressBar.Value = progressBar.Maximum;
         }
 
@@ -114,13 +91,16 @@ namespace MathWizard
                 printDialog.ShowDialog()==DialogResult.OK)
             {
                 printDocument.PrinterSettings = printDialog.PrinterSettings;
+                progressBar.Value = 0;
                 printDocument.Print();
             }
         }
 
         private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            progressBar.Value = 0;
             Faker.Print(e);
+            progressBar.Value = progressBar.Maximum;
         }
 
         private void ToTrinomialButton_Click(object sender, EventArgs e)
@@ -203,16 +183,16 @@ namespace MathWizard
             bool bi = false;
             object otp;
             Display.Text = "Generating Random Quadratic...";
-            if(random.Next(0,2) == 1)
+            if (random.Next(0, 2) == 1)
             {
                 bi = true;
             }
-            if(bi)
+            if (bi)
             {
                 int a = random.Next(1, 50);
                 int b = random.Next(1, 50);
                 int c = random.Next(1, 50);
-               otp = new BinomialQuadratic((a+b)*c,a*b*c,c);
+                otp = new BinomialQuadratic((a + b) * c, a * b * c, c);
             }
             else
             {
@@ -220,10 +200,10 @@ namespace MathWizard
                 int b = random.Next(1, 50);
                 int c = random.Next(1, 50);
                 int d = random.Next(1, 50);
-                otp = new TrinomialQuadratic(d*c+a+b,a*b+c*a+b*a,c*a*b,d);
+                otp = new TrinomialQuadratic(d * c + a + b, a * b + c * a + b * a, c * a * b, d);
             }
             Display.Text = "Random Quadratic Generator  (C)Michael Wang\r\nOutput:\t\n";
-            if(bi)
+            if (bi)
             {
                 BinomialQuadratic temp = (BinomialQuadratic)otp;
                 Display.Text += temp.AsString();

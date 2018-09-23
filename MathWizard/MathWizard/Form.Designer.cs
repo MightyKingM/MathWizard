@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.InputBox = new System.Windows.Forms.TextBox();
             this.ToBinomialButton = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
@@ -37,12 +38,12 @@
             this.Tabs = new System.Windows.Forms.TabControl();
             this.BinomialsTab = new System.Windows.Forms.TabPage();
             this.TrinomialTab = new System.Windows.Forms.TabPage();
-            this.printDialog = new System.Windows.Forms.PrintDialog();
-            this.printDocument = new System.Drawing.Printing.PrintDocument();
-            this.ToTrinomialButton = new System.Windows.Forms.Button();
             this.ToTrinomialQuadratic = new System.Windows.Forms.Button();
+            this.ToTrinomialButton = new System.Windows.Forms.Button();
             this.GeneralToolsTab = new System.Windows.Forms.TabPage();
             this.RandomQuadraticButton = new System.Windows.Forms.Button();
+            this.printDialog = new System.Windows.Forms.PrintDialog();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.Tabs.SuspendLayout();
             this.BinomialsTab.SuspendLayout();
             this.TrinomialTab.SuspendLayout();
@@ -55,6 +56,7 @@
             this.InputBox.Name = "InputBox";
             this.InputBox.Size = new System.Drawing.Size(1270, 38);
             this.InputBox.TabIndex = 0;
+            this.InputBox.WordWrap = false;
             // 
             // ToBinomialButton
             // 
@@ -137,13 +139,15 @@
             this.TrinomialTab.Text = "Trinomial Tools";
             this.TrinomialTab.UseVisualStyleBackColor = true;
             // 
-            // printDialog
+            // ToTrinomialQuadratic
             // 
-            this.printDialog.UseEXDialog = true;
-            // 
-            // printDocument
-            // 
-            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
+            this.ToTrinomialQuadratic.Location = new System.Drawing.Point(222, 6);
+            this.ToTrinomialQuadratic.Name = "ToTrinomialQuadratic";
+            this.ToTrinomialQuadratic.Size = new System.Drawing.Size(200, 50);
+            this.ToTrinomialQuadratic.TabIndex = 4;
+            this.ToTrinomialQuadratic.Text = "ToQuadratic";
+            this.ToTrinomialQuadratic.UseVisualStyleBackColor = true;
+            this.ToTrinomialQuadratic.Click += new System.EventHandler(this.ToTrinomialQuadratic_Click);
             // 
             // ToTrinomialButton
             // 
@@ -154,16 +158,6 @@
             this.ToTrinomialButton.Text = "ToTrinomial";
             this.ToTrinomialButton.UseVisualStyleBackColor = true;
             this.ToTrinomialButton.Click += new System.EventHandler(this.ToTrinomialButton_Click);
-            // 
-            // ToTrinomialQuadratic
-            // 
-            this.ToTrinomialQuadratic.Location = new System.Drawing.Point(222, 6);
-            this.ToTrinomialQuadratic.Name = "ToTrinomialQuadratic";
-            this.ToTrinomialQuadratic.Size = new System.Drawing.Size(200, 50);
-            this.ToTrinomialQuadratic.TabIndex = 4;
-            this.ToTrinomialQuadratic.Text = "ToQuadratic";
-            this.ToTrinomialQuadratic.UseVisualStyleBackColor = true;
-            this.ToTrinomialQuadratic.Click += new System.EventHandler(this.ToTrinomialQuadratic_Click);
             // 
             // GeneralToolsTab
             // 
@@ -186,16 +180,25 @@
             this.RandomQuadraticButton.UseVisualStyleBackColor = true;
             this.RandomQuadraticButton.Click += new System.EventHandler(this.RandomQuadraticButton_Click);
             // 
+            // printDialog
+            // 
+            this.printDialog.UseEXDialog = true;
+            // 
+            // printDocument
+            // 
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 900);
+            this.ClientSize = new System.Drawing.Size(1300, 758);
             this.Controls.Add(this.Tabs);
             this.Controls.Add(this.PrintWork);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.InputBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.Text = "Math Wizard";
             this.Tabs.ResumeLayout(false);

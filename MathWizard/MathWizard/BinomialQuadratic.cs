@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MathWizard
 {
     class BinomialQuadratic
     {
-        public int a;
-        public int b;
-        public int c;
+        public double a;
+        public double b;
+        public double c;
         public bool quickfactor = true;
-        public int GetMaximumProgress()
+        public double GetMaximumProgress()
         {
             if(!quickfactor)
             {
@@ -20,18 +19,18 @@ namespace MathWizard
             }
             else
             {
-                List<int> data = new List<int>();
+                List<double> data = new List<double>();
                 data.Add(a); data.Add(b);
-                return data.Max();
+                return data.Max()/c;
             }
         }
-        public BinomialQuadratic(int a, int b)
+        public BinomialQuadratic(double a, double b)
         {
             this.a = a;
             this.b = b;
             this.c = 1;
         }
-        public BinomialQuadratic(int a, int b,int c)
+        public BinomialQuadratic(double a, double b,double c)
         {
             this.a = a;
             this.b = b;
@@ -41,7 +40,7 @@ namespace MathWizard
         {
             string temp = "";
             input +=" ";
-            List<int> data = new List<int>();
+            List<double> data = new List<double>();
             for (int i = 0; i < input.Length; i++)
             {
                 if (IsNumber(input[i]))
@@ -52,12 +51,12 @@ namespace MathWizard
                 {
                     if (i != 0 && IsNumber(input[i - 1]))
                     {
-                        data.Add(int.Parse(temp));
+                        data.Add(double.Parse(temp));
                         temp = "";
                     }
                 }
             }
-            if (IsNumber(input[0]))
+            if (data.Count == 4)
             {
                 c = data[0];
                 a = data[2];
@@ -72,7 +71,7 @@ namespace MathWizard
         }
         public bool IsNumber(char i)
         {
-            if (i == '1' || i == '2' || i == '3' || i == '4' || i == '5' || i == '6' || i == '7' || i == '8' || i == '9' || i == '0'||i=='-')
+            if (i == '1' || i == '2' || i == '3' || i == '4' || i == '5' || i == '6' || i == '7' || i == '8' || i == '9' || i == '0'||i=='-'||i=='.')
             {
                 return true;
             }

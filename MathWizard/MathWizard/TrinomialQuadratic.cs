@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MathWizard
 {
@@ -21,8 +20,8 @@ namespace MathWizard
             }
             List<int> dataset = new List<int>();
             dataset.Add(a); dataset.Add(c);
-            dataset.Add(b); dataset.Add(d);
-            return dataset.Max();
+            dataset.Add(b);
+            return dataset.Max()/d;
         }
         public TrinomialQuadratic(int a, int b, int c)
         {
@@ -61,7 +60,7 @@ namespace MathWizard
                     }
                 }
             }
-            if (IsNumber(input[0]))
+            if (data.Count == 6)
             {
                 d = data[0];
                 a = data[2];
@@ -79,6 +78,10 @@ namespace MathWizard
 
         public string AsString()
         {
+            if(d == 1)
+            {
+                return "X^3+"+a+"X^2+"+b+"X"+c;
+            }
             return d+"X^3+"+a+"X^2+"+b+"X+"+c;
         }
         public bool IsNumber(char i)

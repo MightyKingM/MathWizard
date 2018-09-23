@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MathWizard
 {
@@ -70,6 +69,10 @@ namespace MathWizard
         }
         public string AsString()
         {
+            if(d == 1)
+            {
+                return "(X+" + a + ")(X+" + b + ")(X+" + c + ")"; 
+            }
             return d + "(X+" + a + ")(X+" + b + ")(X+" + c+")";
         }
     }

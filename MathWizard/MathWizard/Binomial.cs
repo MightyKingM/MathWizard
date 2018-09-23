@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MathWizard
 {
     class Binomial
     {
-        public int a;
-        public int b;
-        public int c;
-        public Binomial(int a, int b)
+        public double a;
+        public double b;
+        public double c;
+        public Binomial(double a, double b)
         {
             this.a = a;
             this.b = b;
             this.c = 1;
         }
-        public Binomial(int a, int b, int c)
+        public Binomial(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
@@ -26,7 +25,7 @@ namespace MathWizard
         public Binomial(string input)
         {
             string temp = "";
-            List<int> data = new List<int>();
+            List<double> data = new List<double>();
             for(int i = 0; i<input.Length;i++)
             {
                 if(IsNumber(input[i]))
@@ -37,7 +36,7 @@ namespace MathWizard
                 {
                     if (i != 0 && IsNumber(input[i - 1]))
                     {
-                        data.Add(int.Parse(temp));
+                        data.Add(double.Parse(temp));
                         temp = "";
                     }
                 }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MathWizard
 {
@@ -19,6 +19,19 @@ namespace MathWizard
                 return true;
             }
             return false;
+        }
+        public Binomial ToBinomial(BinomialQuadratic quadratic)
+        {
+            double bgna = quadratic.c;
+            double bgnb = quadratic.a;
+            double bgnc = quadratic.b;
+
+            double item = Math.Sqrt((bgnb * bgnb) - (4 * bgna * bgnc));
+            double b = (-bgnb + item)/ (2 * bgna);
+            double c = (-bgnb - item)/(2*bgna);
+            
+
+            return new Binomial(-b,-c,bgna);
         }
     }
 }
