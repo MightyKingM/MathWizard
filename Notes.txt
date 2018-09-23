@@ -3,6 +3,9 @@ Math Wizard
 
 Release Notes
 -------------------------------------------------------------------------------------------------------------------------------------------
+Release 5.0.0.0
+Math Wizard caan no instantaniously solve any quadratic of any size (binomial-quadratics only)! Math wizard is aplso now compatible with doubles (eg 1.0, 3.0, 8.0), and will output in doubles. These changes only apply to binomial tools.
+-------------------------------------------------------------------------------------------------------------------------------------------
 Release 4.0.0.0
 We added compatibility for subtraction (negative integers). Because we added negative integers, the amount of work in multiplied by alot. math wizard will be 4, or 8 times slower, depending on the function performed. We also added Work Faker (beta version). Work faker fakes work for your math problem. Note: Prepare at least 20 sheets of letter size paper for printing.
 -------------------------------------------------------------------------------------------------------------------------------------------
