@@ -41,11 +41,11 @@
             this.ToTrinomialQuadratic = new System.Windows.Forms.Button();
             this.ToTrinomialButton = new System.Windows.Forms.Button();
             this.GeneralToolsTab = new System.Windows.Forms.TabPage();
+            this.AboutButton = new System.Windows.Forms.Button();
+            this.ReleaseNotesButton = new System.Windows.Forms.Button();
             this.RandomQuadraticButton = new System.Windows.Forms.Button();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
-            this.ReleaseNotesButton = new System.Windows.Forms.Button();
-            this.AboutButton = new System.Windows.Forms.Button();
             this.Tabs.SuspendLayout();
             this.BinomialsTab.SuspendLayout();
             this.TrinomialTab.SuspendLayout();
@@ -174,6 +174,26 @@
             this.GeneralToolsTab.Text = "GeneralTools";
             this.GeneralToolsTab.UseVisualStyleBackColor = true;
             // 
+            // AboutButton
+            // 
+            this.AboutButton.Location = new System.Drawing.Point(559, 9);
+            this.AboutButton.Name = "AboutButton";
+            this.AboutButton.Size = new System.Drawing.Size(250, 50);
+            this.AboutButton.TabIndex = 7;
+            this.AboutButton.Text = "About";
+            this.AboutButton.UseVisualStyleBackColor = true;
+            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
+            // 
+            // ReleaseNotesButton
+            // 
+            this.ReleaseNotesButton.Location = new System.Drawing.Point(294, 9);
+            this.ReleaseNotesButton.Name = "ReleaseNotesButton";
+            this.ReleaseNotesButton.Size = new System.Drawing.Size(250, 50);
+            this.ReleaseNotesButton.TabIndex = 6;
+            this.ReleaseNotesButton.Text = "ReleaseNotes";
+            this.ReleaseNotesButton.UseVisualStyleBackColor = true;
+            this.ReleaseNotesButton.Click += new System.EventHandler(this.ReleaseNotesButton_Click);
+            // 
             // RandomQuadraticButton
             // 
             this.RandomQuadraticButton.Location = new System.Drawing.Point(6, 9);
@@ -192,26 +212,6 @@
             // 
             this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
             // 
-            // ReleaseNotesButton
-            // 
-            this.ReleaseNotesButton.Location = new System.Drawing.Point(294, 9);
-            this.ReleaseNotesButton.Name = "ReleaseNotesButton";
-            this.ReleaseNotesButton.Size = new System.Drawing.Size(250, 50);
-            this.ReleaseNotesButton.TabIndex = 6;
-            this.ReleaseNotesButton.Text = "ReleaseNotes";
-            this.ReleaseNotesButton.UseVisualStyleBackColor = true;
-            this.ReleaseNotesButton.Click += new System.EventHandler(this.ReleaseNotesButton_Click);
-            // 
-            // AboutButton
-            // 
-            this.AboutButton.Location = new System.Drawing.Point(559, 9);
-            this.AboutButton.Name = "AboutButton";
-            this.AboutButton.Size = new System.Drawing.Size(250, 50);
-            this.AboutButton.TabIndex = 7;
-            this.AboutButton.Text = "About";
-            this.AboutButton.UseVisualStyleBackColor = true;
-            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -225,6 +225,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.Text = "Math Wizard";
+            this.Shown += new System.EventHandler(this.Form_Shown);
             this.Tabs.ResumeLayout(false);
             this.BinomialsTab.ResumeLayout(false);
             this.TrinomialTab.ResumeLayout(false);

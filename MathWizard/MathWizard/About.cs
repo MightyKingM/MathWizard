@@ -18,13 +18,28 @@ namespace MathWizard
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             WebClient client = new WebClient();
-            if (name == "releasenotes")
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            try
             {
-                webBrowser.DocumentText = client.DownloadString("https://raw.githubusercontent.com/MightyKingM/MathWizard/master/Notes.txt");
+                if (name == "releasenotes")
+                {
+                    webBrowser.DocumentText = client.DownloadString("https://raw.githubusercontent.com/MightyKingM/MathWizard/master/Notes.txt");
+                }
+                if (name == "about")
+                {
+                    webBrowser.DocumentText = client.DownloadString("https://raw.githubusercontent.com/MightyKingM/MathWizard/master/About.txt");
+                }
+                if (name == "start")
+                {
+                    webBrowser.DocumentText = client.DownloadString("https://raw.githubusercontent.com/MightyKingM/MathWizard/master/StartupText.txt");
+                }
             }
-            if(name == "about")
+            catch(Exception e)
             {
-                webBrowser.DocumentText = client.DownloadString("https://raw.githubusercontent.com/MightyKingM/MathWizard/master/About.txt");
+                webBrowser.DocumentText = "Sorry Pal, <br>"+
+                    "We can't fetch any data. Heres the problenm:<br>"+
+                    ""+e.Message;
             }
             this.ShowDialog();
         }

@@ -227,5 +227,10 @@ namespace MathWizard
         {
             about = new About("about");
         }
+
+        private void Form_Shown(object sender, EventArgs e)
+        {
+            about = new About("start");
+        }
     }
 }
