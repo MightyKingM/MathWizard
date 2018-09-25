@@ -1,5 +1,5 @@
 <h1>Welcome To Math Wizard!</h1><br><br>
-Version:5.0.0.0<br><br>
+Version: 5.0.0.0<br><br>
 <h3>Whats New:</h3>
 <br>-Decimal Compatibility (binomial tools only)
 <br>-Instantanious Results (binomial tools only)
