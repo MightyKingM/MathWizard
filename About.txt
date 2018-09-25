@@ -1,2 +1,3 @@
+</pre>
 About Math Wizard<br><br>
   Quadratics and Polynomials are diffiucult peices of knowledge to aquire. Math Wizard is a quadratic-polynomial conversion utility tool used for empowering students, educators, and administrator. With Math Wizards advanced WorkFaker, students can learn how the quadratics are converted to polynomials, or vice versa.
