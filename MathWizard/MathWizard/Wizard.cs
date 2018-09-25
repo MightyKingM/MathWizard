@@ -33,5 +33,9 @@ namespace MathWizard
 
             return new Binomial(-b,-c,bgna);
         }
+        //public Trinomial ToTrinomial(TrinomialQuadratic quadratic)
+        //{
+
+        //}
     }
 }

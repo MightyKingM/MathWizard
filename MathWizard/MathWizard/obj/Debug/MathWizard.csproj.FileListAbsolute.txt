@@ -6,3 +6,4 @@ c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.exe
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.pdb
 c:\users\michael\documents\visual studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.Form.resources
+C:\Users\Michael\Documents\Visual Studio 2017\Projects\MathWizard\MathWizard\obj\Debug\MathWizard.About.resources

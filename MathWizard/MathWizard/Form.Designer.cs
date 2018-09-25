@@ -44,6 +44,8 @@
             this.RandomQuadraticButton = new System.Windows.Forms.Button();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.ReleaseNotesButton = new System.Windows.Forms.Button();
+            this.AboutButton = new System.Windows.Forms.Button();
             this.Tabs.SuspendLayout();
             this.BinomialsTab.SuspendLayout();
             this.TrinomialTab.SuspendLayout();
@@ -161,6 +163,8 @@
             // 
             // GeneralToolsTab
             // 
+            this.GeneralToolsTab.Controls.Add(this.AboutButton);
+            this.GeneralToolsTab.Controls.Add(this.ReleaseNotesButton);
             this.GeneralToolsTab.Controls.Add(this.RandomQuadraticButton);
             this.GeneralToolsTab.Location = new System.Drawing.Point(10, 48);
             this.GeneralToolsTab.Name = "GeneralToolsTab";
@@ -187,6 +191,26 @@
             // printDocument
             // 
             this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
+            // 
+            // ReleaseNotesButton
+            // 
+            this.ReleaseNotesButton.Location = new System.Drawing.Point(294, 9);
+            this.ReleaseNotesButton.Name = "ReleaseNotesButton";
+            this.ReleaseNotesButton.Size = new System.Drawing.Size(250, 50);
+            this.ReleaseNotesButton.TabIndex = 6;
+            this.ReleaseNotesButton.Text = "ReleaseNotes";
+            this.ReleaseNotesButton.UseVisualStyleBackColor = true;
+            this.ReleaseNotesButton.Click += new System.EventHandler(this.ReleaseNotesButton_Click);
+            // 
+            // AboutButton
+            // 
+            this.AboutButton.Location = new System.Drawing.Point(559, 9);
+            this.AboutButton.Name = "AboutButton";
+            this.AboutButton.Size = new System.Drawing.Size(250, 50);
+            this.AboutButton.TabIndex = 7;
+            this.AboutButton.Text = "About";
+            this.AboutButton.UseVisualStyleBackColor = true;
+            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
             // Form
             // 
@@ -227,6 +251,8 @@
         private System.Windows.Forms.Button ToTrinomialQuadratic;
         private System.Windows.Forms.TabPage GeneralToolsTab;
         private System.Windows.Forms.Button RandomQuadraticButton;
+        private System.Windows.Forms.Button ReleaseNotesButton;
+        private System.Windows.Forms.Button AboutButton;
     }
 }
 

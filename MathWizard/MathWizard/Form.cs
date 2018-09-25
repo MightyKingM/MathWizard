@@ -13,6 +13,7 @@ namespace MathWizard
     {
         WorkFaker Faker;
         Wizard wizard;
+        About about;
         public Form()
         {
             InitializeComponent();
@@ -53,7 +54,9 @@ namespace MathWizard
             Faker.NewLine("="+otp.AsString());
             Display.Text += "\r\nBegining Value:\r\n" + bgn.AsString();
             Display.Text += "\r\nOutput:\r\n"+otp.AsString();
-            
+            Faker.NewLine("This is because "+bgn.a+"/"+bgn.c+"="+otp.a+"+"+otp.b);
+            Faker.NewLine("and " + bgn.b + "/" + bgn.c + "=" + otp.a + "*" + otp.b);
+            Faker.NewLine("");
             Faker.question++;progressBar.Value = progressBar.Maximum;
         }
 
@@ -213,6 +216,16 @@ namespace MathWizard
                 TrinomialQuadratic temp = (TrinomialQuadratic)otp;
                 Display.Text += temp.AsString();
             }
+        }
+
+        private void ReleaseNotesButton_Click(object sender, EventArgs e)
+        {
+            about = new About("releasenotes");
+        }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            about = new About("about");
         }
     }
 }
